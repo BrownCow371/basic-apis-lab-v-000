@@ -8,6 +8,8 @@ class RepositoriesController < ApplicationController
     @resp = Faraday.get 'https://api.github.com/search/repositories' do |req|
       req.params['q'] = params[:query]
     end
+
+    @body_hash = JSON.parse(@resp.body)
     render 'search'
   end
 end
