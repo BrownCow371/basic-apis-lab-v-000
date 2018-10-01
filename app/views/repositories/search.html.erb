@@ -5,6 +5,9 @@
   <%= submit_tag "Search Github!" %>
 <% end %>
 <div class="">
+  <%=@body_hash%>
+</div>
+<div class="">
   <%@repositories.each do |repo|%>
   <li>
     <%= repo['name']%><br>
