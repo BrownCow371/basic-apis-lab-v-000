@@ -9,4 +9,5 @@ class RepositoriesController < ApplicationController
       req.params['q'] = params[:query]
     end
   render 'search'
+  end
 end
