@@ -8,11 +8,13 @@
   <%=@body_hash%>
 </div>
 <div class="">
-  <%@repositories.each do |repo|%>
-  <li>
-    <%= repo['name']%><br>
-    <%=repo['description']%><br>
-    <a href=""<%=repo['html_url']%>"><%=repo['html_url']%></a>
-  </li>
+  <%if @repositories %>
+    <%@repositories.each do |repo|%>
+    <li>
+      <%= repo['name']%><br>
+      <%=repo['description']%><br>
+      <a href=""<%=repo['html_url']%>"><%=repo['html_url']%></a>
+    </li>
+    <%end%>
   <%end%>
 </div>
